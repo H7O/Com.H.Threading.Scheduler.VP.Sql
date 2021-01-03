@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Hussein Al Bayati</Authors>
+    <Description>Sql server value processor for Com.H.Threading.Scheduler library</Description>
+    <Copyright>Hussein Al Bayati</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/H7O/Com.H.Threading.Scheduler.Sql</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/H7O/Com.H.Threading.Scheduler.Sql</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.H.EF.Relational" Version="1.0.0" />
+    <PackageReference Include="Com.H.Threading.Scheduler" Version="1.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>
