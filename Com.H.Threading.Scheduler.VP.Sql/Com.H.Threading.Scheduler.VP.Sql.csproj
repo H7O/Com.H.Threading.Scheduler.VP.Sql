@@ -16,9 +16,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Com.H.EF.Relational" Version="1.0.1" />
-    <PackageReference Include="Com.H.Threading.Scheduler" Version="1.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Com.H">
+      <HintPath>..\..\Com.H\Com.H\bin\Release\net5.0\Com.H.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.H.EF.Relational">
+      <HintPath>..\..\Com.H.EF.Relational\Com.H.EF.Relational\bin\Release\net5.0\Com.H.EF.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.H.Threading.Scheduler">
+      <HintPath>..\..\Com.H.Threading.Scheduler\Com.H.Threading.Scheduler\bin\Release\net5.0\Com.H.Threading.Scheduler.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
