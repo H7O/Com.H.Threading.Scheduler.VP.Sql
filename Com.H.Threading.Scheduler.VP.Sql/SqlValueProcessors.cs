@@ -14,7 +14,6 @@ namespace Com.H.Threading.Scheduler.VP.Sql
 {
     public static class SqlValueProcessors
     {
-
         #region DbContext
         private static DbContext GetDbContext(string connectionString)
         {
