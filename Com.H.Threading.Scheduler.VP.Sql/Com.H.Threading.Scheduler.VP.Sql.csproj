@@ -6,8 +6,8 @@
     <Description>Sql server value processor for Com.H.Threading.Scheduler library</Description>
     <Copyright>Hussein Al Bayati</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/H7O/Com.H.Threading.Scheduler.Sql</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/H7O/Com.H.Threading.Scheduler.Sql</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
