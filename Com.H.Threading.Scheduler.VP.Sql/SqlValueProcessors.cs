@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace Com.H.Threading.Scheduler.VP.Sql
 {
-    public static class SqlValueProcessors
+    public class SqlValueProcessor : IValueProcessor
     {
         #region DbContext
         private static DbContext GetDbContext(string connectionString)
@@ -23,7 +23,7 @@ namespace Com.H.Threading.Scheduler.VP.Sql
         }
         #endregion
 
-        public static ValueProcessorItem SqlProcessor(this ValueProcessorItem valueItem, 
+        public ValueProcessorItem GetProcessor(ValueProcessorItem valueItem, 
             CancellationToken? token = null)
         {
             if (valueItem.IsValid("sql") == false) return valueItem;

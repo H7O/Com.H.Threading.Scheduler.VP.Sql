@@ -16,10 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Com.H" Version="0.0.9" />
-    <PackageReference Include="Com.H.EF.Relational" Version="1.0.2" />
-    <PackageReference Include="Com.H.Threading.Scheduler" Version="1.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.13" />
   </ItemGroup>
 
   <ItemGroup>
