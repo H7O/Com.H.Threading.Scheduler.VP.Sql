@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Com.H.Data.EF.Relational;
+using Com.H.EF.Relational;
 using Com.H.Threading.Scheduler.VP;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
