@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Com.H.Threading.Scheduler.VP.Sql</AssemblyName>
+    <RootNamespace>Com.H.Threading.Scheduler.VP.Sql</RootNamespace>
+    <ApplicationIcon>128x128.ico</ApplicationIcon>
+    <Version>5.0.0.1</Version>
+    <Authors>Hussein Al Bayati</Authors>
+    <Description>Sql server value processor for Com.H.Threading.Scheduler library</Description>
+    <Copyright>Hussein Al Bayati</Copyright>
+    <PackageProjectUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</PackageProjectUrl>
+    <PackageIcon>128x128.jpg</PackageIcon>
+    <PackageReadmeFile>nuget.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>plug-in</PackageTags>
+    <PackageReleaseNotes>Maintenance release</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="128x128.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\128x128.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\nuget.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.H.EF.Relational" Version="5.0.17.2" />
+    <PackageReference Include="Com.H.Threading.Scheduler" Version="5.0.17.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+  </ItemGroup>
+
+</Project>

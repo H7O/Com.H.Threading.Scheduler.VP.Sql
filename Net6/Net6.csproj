@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Com.H.Threading.Scheduler.VP.Sql</AssemblyName>
+    <RootNamespace>Com.H.Threading.Scheduler.VP.Sql</RootNamespace>
+    <ApplicationIcon>128x128.ico</ApplicationIcon>
+    <Version>6.0.0.1</Version>
+    <Authors>Hussein Al Bayati</Authors>
+    <Copyright>Hussein Al Bayati</Copyright>
+    <PackageProjectUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</PackageProjectUrl>
+    <Description>Sql server value processor for Com.H.Threading.Scheduler library</Description>
+    <PackageIcon>128x128.jpg</PackageIcon>
+    <PackageReadmeFile>nuget.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Plug-in</PackageTags>
+    <PackageReleaseNotes>Maintenance release</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="128x128.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\128x128.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\nuget.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Com.H">
+      <HintPath>..\..\Com.H\Net6\bin\Release\net6.0\Com.H.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.H.EF.Relational">
+      <HintPath>..\..\Com.H.EF.Relational\Net6\bin\Release\net6.0\Com.H.EF.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.H.Threading.Scheduler">
+      <HintPath>..\..\Com.H.Threading.Scheduler\Net6\bin\Release\net6.0\Com.H.Threading.Scheduler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
