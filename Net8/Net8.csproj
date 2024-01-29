@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Com.H.Threading.Scheduler.VP.Sql</AssemblyName>
+    <RootNamespace>Com.H.Threading.Scheduler.VP.Sql</RootNamespace>
+    <ApplicationIcon>128x128.ico</ApplicationIcon>
+    <Version>8.0.0.0</Version>
+    <Authors>Hussein Al Bayati</Authors>
+    <Copyright>Hussein Al Bayati</Copyright>
+    <PackageProjectUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</PackageProjectUrl>
+    <Description>Sql server value processor for Com.H.Threading.Scheduler library</Description>
+    <PackageIcon>128x128.jpg</PackageIcon>
+    <PackageReadmeFile>nuget.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Plug-in</PackageTags>
+    <PackageReleaseNotes>Maintenance release</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Content Include="128x128.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\128x128.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\nuget.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.H" Version="8.0.0" />
+    <PackageReference Include="Com.H.Data.Common" Version="8.0.0" />
+    <PackageReference Include="Com.H.Threading.Scheduler" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
+  </ItemGroup>
+
+</Project>
