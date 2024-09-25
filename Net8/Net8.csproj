@@ -8,7 +8,7 @@
     <AssemblyName>Com.H.Threading.Scheduler.VP.Sql</AssemblyName>
     <RootNamespace>Com.H.Threading.Scheduler.VP.Sql</RootNamespace>
     <ApplicationIcon>128x128.ico</ApplicationIcon>
-    <Version>8.0.0.0</Version>
+    <Version>8.0.0.1</Version>
     <Authors>Hussein Al Bayati</Authors>
     <Copyright>Hussein Al Bayati</Copyright>
     <PackageProjectUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</PackageProjectUrl>
@@ -40,10 +40,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Com.H" Version="8.0.0" />
-    <PackageReference Include="Com.H.Data.Common" Version="8.0.0" />
-    <PackageReference Include="Com.H.Threading.Scheduler" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
+    <PackageReference Include="Com.H" Version="8.0.0.14" />
+    <PackageReference Include="Com.H.Data.Common" Version="8.0.0.6" />
+    <PackageReference Include="Com.H.Threading.Scheduler" Version="8.0.0.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
   </ItemGroup>
 
 </Project>
