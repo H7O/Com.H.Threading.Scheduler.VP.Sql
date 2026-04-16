@@ -1,29 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Data.Common;
 using System.Threading;
-using System.Threading.Tasks;
-using Com.H.EF.Relational;
-
+using Com.H.Data.Common;
 using Com.H.Threading.Scheduler.VP;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.Data.SqlClient;
 
 
 namespace Com.H.Threading.Scheduler.VP.Sql
 {
     public class SqlValueProcessor : IValueProcessor
     {
-        #region DbContext
-        private static DbContext GetDbContext(string connectionString)
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<DbContext>();
-            optionsBuilder.UseSqlServer(connectionString);
-            return new DbContext(optionsBuilder.Options);
-        }
-        #endregion
-
         public ValueProcessorItem GetProcessor(ValueProcessorItem valueItem, 
             CancellationToken? token = null)
         {
@@ -34,14 +20,11 @@ namespace Com.H.Threading.Scheduler.VP.Sql
                     $"Missing 'connection_string' attribute for tag '{valueItem.Item?.FullName}");
             try
             {
-#pragma warning disable CS8604 // Possible null reference argument.
-                DbContext db = GetDbContext(valueItem.Item.Attributes["connection_string"]);
-#pragma warning restore CS8604 // Possible null reference argument.
-                valueItem.Data = token == null?
-                    db.ExecuteQuery(valueItem.Value??"", null)
-                    : Cancellable.CancellableRun<IEnumerable<dynamic>>(
-                    () => db.ExecuteQuery(valueItem.Value??"", null),
-                    (CancellationToken)token);
+                DbConnection db = new SqlConnection(valueItem.Item.Attributes["connection_string"]);
+                valueItem.Data = db.ExecuteQuery(
+                    valueItem.Value ?? "",
+                    closeConnectionOnExit: true,
+                    cToken: token ?? default);
                 return valueItem;
             }
             catch (Exception ex)

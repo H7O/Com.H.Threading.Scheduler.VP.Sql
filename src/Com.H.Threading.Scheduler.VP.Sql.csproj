@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>Com.H.Threading.Scheduler.VP.Sql</AssemblyName>
     <RootNamespace>Com.H.Threading.Scheduler.VP.Sql</RootNamespace>
-    <ApplicationIcon>128x128.ico</ApplicationIcon>
-    <Version>6.0.0.2</Version>
+    <Version>10.0.0.0</Version>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
     <Authors>Hussein Al Bayati</Authors>
     <Copyright>Hussein Al Bayati</Copyright>
     <PackageProjectUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</PackageProjectUrl>
@@ -17,14 +19,11 @@
     <RepositoryUrl>https://github.com/H7O/Com.H.Threading.Scheduler.VP.Sql</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Plug-in</PackageTags>
-    <PackageReleaseNotes>Maintenance release</PackageReleaseNotes>
+    <PackageReleaseNotes>Added net9.0 and net10.0 targets; updated to use Com.H.Data.Common async API with native cancellation support; embedded debug symbols for source stepping</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="128x128.ico" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\128x128.jpg">
@@ -38,10 +37,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Com.H" Version="6.0.2.5" />
-    <PackageReference Include="Com.H.EF.Relational" Version="6.0.0.3" />
-    <PackageReference Include="Com.H.Threading.Scheduler" Version="6.0.6.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Com.H" Version="[10.1.*,)" />
+    <PackageReference Include="Com.H.Data.Common" Version="[10.1.*,)" />
+    <PackageReference Include="Com.H.Threading.Scheduler" Version="[10.0.*,)" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="[7.*,)" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="[10.0.*,)" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
